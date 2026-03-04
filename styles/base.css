@@ -65,16 +65,45 @@ main .card h2 {
 
 main .card:first-of-type {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
 }
 
-main .card:first-of-type img {
-    order: 1;
+main .card:first-of-type img:first-of-type {
     padding: 1rem;
+    justify-self: end;
+    align-self: start;
 }
 
-main .card:first-of-type p {
+main .card:first-of-type h3 {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    text-align: center;
+    justify-self: center;
+    border-bottom: 2px solid lightgrey;
+    font-size: x-large;
+    width: fit-content;
+}
+
+main .card:first-of-type p:first-of-type {
     padding: 1rem;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+main .card:first-of-type img:nth-of-type(2) {
+    display: block;
+    justify-self: end;
+    align-self: start;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+main .card:first-of-type p:nth-of-type(2) {
+    padding: 1rem;
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
 }
 
 main ul {
