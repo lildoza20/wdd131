@@ -57,19 +57,19 @@ main h1 {
 
 main div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-    place-items: center;
-    text-align: center;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 figure {
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
     text-align: center;
 }
 
-img {
+figure img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
