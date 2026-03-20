@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: navy;
+    --secondary-color: lightblue;
+    --accent-color: white;
+    --card-bg: white;
+    --page-bg: lightgray;
+    --text-color: black;
+    --max-width: 1100px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero-container {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.info, .weather {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid grey;
+    border-radius: 1rem;
+}
+
+.info h2, .weather h2 {
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.info p, .weather p {
+    margin: .5rem 0;
+}
+
+.weather img {
+    display: block;
+    width: 75px;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: .5rem 0;
+}
+
+@media (min-width: 760px) {
+    .info, .weather {
+        position: absolute;
+        width: 250px;
+        background-color: var(--accent-color);
+        margin: 0;
+    }
+
+    .info {
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .weather img {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ☀️ ";
+    }
+}

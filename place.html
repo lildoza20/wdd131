@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WDD 131 - El Paso - Rafael Mendoza </title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals | Rafael Mendoza | This is the place page about El Paso">
+    <meta name="author" content="Rafael Mendoza">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1> El Paso, TX </h1>
+    </header>
+    <main>
+        <div class="hero-container">
+            <section class="hero">
+                <picture>
+                    <source srcset="images/el-paso-day.webp" media="(min-width: 760px)">
+                    <img src="images/el-paso-day.webp" alt="Night view of El Paso, TX">
+                </picture>
+            </section>
+            <section class="info">
+                <h2> Info </h2>
+                <p> State: Texas </p>
+                <p> Population: 678,000-682,000 </p>
+                <p> Region: West Texas </p>
+                <p> Known For: Mexican Food, Franklin Mountains, Sun City, Rio Grande </p>
+            </section>
+            <section class="weather">
+                <h2> Weather </h2>
+                <img src="images/sunny.svg" alt="Sunny Weather Icon">
+                <p> Temperature: <span id="temperature"> 73 </span> °F </p>
+                <p> Conditions: Sunny </p>
+                <p> Wind: <span id="windspeed"> 5 </span> mph </p>
+                <p> Wind Chill: <span id="windchill"></span></p>
+            </section>
+        </div>
+    </main>    
+    <footer>
+        <p> ©️ <span id="currentyear"></span> | Rafael Mendoza | USA </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
