@@ -1,0 +1,120 @@
+:root {
+    --primary-color: navy;
+    --secondary-color: lightblue;
+    --accent-color: white;
+    --page-bg: lightgray;
+    --text-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+form {
+    padding: 1rem;
+    max-width: 400px;
+    width: 100%;
+    border: solid 2px var(--text-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+}
+
+.pr1 fieldset {
+    margin: 1rem 0;
+    border: solid 2px var(--text-color);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.pr1 legend {
+    color: var(--text-color);
+    padding: 0 .5rem;
+    font-weight: bold;
+}
+
+.pr1 label {
+    display: block;
+    margin-top: .75rem;
+    color: var(--text-color);
+    font-size: .95rem;
+}
+
+.pr1 div {
+    margin: .25rem auto .5rem auto;
+    color: var(--text-color);
+    font-size: .9rem;
+}
+
+.pr1 textarea,
+.pr1 input[type="text"],
+.pr1 input[type="date"],
+.pr1 select {
+    background-color: var(--accent-color);
+    display: block;
+    border: solid 1px var(--page-bg);
+    border-radius: 6px;
+    padding: .75rem;
+    margin: .5rem;
+    color: var(--text-color);
+    width: 100%;
+    margin-top: .35rem;
+    appearance: none;
+}
+
+.pr1 textarea {
+    min-height: 100px;
+}
+
+.pr1 input[type="radio"],
+.pr1 input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.pr1 input[type="submit"] {
+    display: block;
+    border: solid 1px var(--text-color);
+    color: var(--accent-color);
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    width: 96%;
+    font-weight: bold;
+    align-items: center;
+    margin: 1rem 2% 1.5rem 2%;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: .5rem 0;
+}
