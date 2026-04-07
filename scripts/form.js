@@ -34,3 +34,12 @@ products.forEach(product => {
     option.textContent = product.name;
     productSelect.appendChild(option);
 });
+
+let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+reviewCount += 1;
+localStorage.setItem("reviewCount", reviewCount);
+
+const reviewCountElement = document.querySelector("#reviewCount");
+if(reviewCountElement) {
+  reviewCountElement.textContent = reviewCount;
+}
