@@ -28,18 +28,21 @@ const products = [
 
 const productSelect = document.querySelector("#product");
 
-products.forEach(product => {
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
-});
+if (productSelect) {
+  products.forEach(product => {
+      const option = document.createElement("option");
+      option.value = product.id;
+      option.textContent = product.name;
+      productSelect.appendChild(option);
+  }); 
+}
 
-let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
-reviewCount += 1;
-localStorage.setItem("reviewCount", reviewCount);
+
 
 const reviewCountElement = document.querySelector("#reviewCount");
 if(reviewCountElement) {
+  let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+  reviewCount += 1;
+  localStorage.setItem("reviewCount", reviewCount);
   reviewCountElement.textContent = reviewCount;
 }
