@@ -37,8 +37,6 @@ if (productSelect) {
   }); 
 }
 
-
-
 const reviewCountElement = document.querySelector("#reviewCount");
 if(reviewCountElement) {
   let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
@@ -46,3 +44,4 @@ if(reviewCountElement) {
   localStorage.setItem("reviewCount", reviewCount);
   reviewCountElement.textContent = reviewCount;
 }
+

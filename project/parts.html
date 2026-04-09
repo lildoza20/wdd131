@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PC Build Help and Troubleshooter Parts Page </title>
+    <meta name="description" content="This is the parts page for PC Build Help and Troubleshooter">
+    <meta name="author" content="Rafael Mendoza">
+    <link rel="stylesheet" href="styles/pchelp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+    <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/project.js" defer></script>
+</head>
+<body class="parts">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="parts.html">Parts Guide</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="contact.html">Contact</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1> PC Parts Guide </h1>
+            <p> Choosing PC parts can feel overwhelming. This page will help explain the purpose of the main computer components and helps beginners understand what to focus on when building or upgrading a PC. </p>
+            <img src="images/interiorpc.jpg" alt="Inside view of my desktop PC showing multiple parts" width="500" loading="lazy">
+        </section>
+        
+        <section class="pgrid">
+            <article class="pcard">
+                <h2> CPU </h2>
+                <p> The CPU, or Central Processing Unit, is the brain of the computer, everything is run by it.  It can be compared by clock speed in GHz, number of cores, and number of threads. The stronger a CPU is, the better it helps out with multitasking, gaming performance, and demanding software. </p>
+            </article>
+
+            <article class="pcard">
+                <h2> GPU </h2>
+                <img src="images/gpu-box.jpg" alt="This is a photo of a GPU box that I took" width="500" loading="lazy">
+                <p> The GPU, or Graphics Processing Unit, is like the muscles of a computer, it can handle a LOT of heavy lifting for graphic and visual processing. It can be compared by VRAM amount, clock speed in MHz, cooling, and overall performance level. It is very important for gaming, video editing, 3D work, and other graphically demanding tasks. </p>
+            </article>
+
+            <article class="pcard">
+                <h2> RAM </h2>
+                <img src="images/ram-close.jpg" alt="Close up photo of my installed RAM in the PC" width="500" loading="lazy">
+                <p> The RAM, or Random Access Memory, it is like short term memory, that stores a lot of important information on your computer for quick access to it. It can be compared by size in GB, speed in MHz, and latency such as CL rating. It will help your computer run more smoothly, especially when multitasking or using demanding programs. </p>
+            </article>
+
+            <article class="pcard">
+                <h2> Storage </h2>
+                <p> Storage, often referred to as memory, is like long term memory, is where all your files are stored. It can have storage types include HDD, which means Hard Disk Drive, SSD, which means Solid State Drive, and NVMe SSD, which means Non-Volatile Memory Express Solid State Drive. It can be compared by size in GB or TB and by read and write speed. If your drive gets too full, your computer can start to slow down and run into issues. </p>
+            </article>
+
+            <article class="pcard">
+                <h2> Motherboard </h2>
+                <p> The Motherboard is like the heart of a computer, it helps connect all the parts together. It can be compared by size, socket type, RAM support, storage slots, ports, Wi-Fi features, and overall build quality. It is very important because it will determine compatibility on your CPU, RAM, Storage, and other components. </p>
+            </article>
+
+            <article class="pcard">
+                <h2> Power Supply </h2>
+                <img src="images/psu-close.jpg" alt="This is a close up photo of my PSU installed" width="500" loading="lazy"
+                <p> The Power Supply is like the nervous system of a computer, it will help provide electricity to all components.  It can be compared by wattage, efficiency rating such as Bronze, Gold, or Platinum, and whether it is modular, semi-modular, or non-modular. A better power supply can help with stability, safety, cable management, and supporting stronger parts. </p>
+            </article>
+
+            <article class="pcard">
+                <h2> Cooling </h2>
+                <p> The Cooling is like the blood of a computer, it will help keep temperatures under control, protect parts, and improve performance. It can include CPU air coolers, AIO coolers, which means All-In-One liquid coolers, and case fans that improve airflow. It can be compared by size, fan speed, noise level, radiator size, and overall cooling performance. Good cooling helps protect your parts and can keep your system from overheating. </p>
+            </article>
+
+            <article class="pcard">
+                <h2> Case </h2>
+                <p> The Case, is like the body of a computer, it will hold all the parts together. It can be compared by size, airflow, fan support, GPU clearance, radiator support, cable management space, and overall design. The choice of case will affect airflow, size compatibility, weight, upgrade options, and the look of the build. </p>
+            </article>
+        </section>
+
+        <section class="build-tips">
+            <h2> How to Choose the Right Parts </h2>
+            <ul>
+                <li> Choose parts based on what you want the computer to do, such as gaming, school, office work, streaming, or editing. </li>
+                <li> Make sure the CPU, motherboard, and RAM are compatible. If they are not, you may have to return parts or replace them. </li>
+                <li> Pick a power supply with enough wattage and a decent efficiency rating for your parts. </li>
+                <li> Using an SSD or NVMe SSD helps a lot with faster boot times, loading times, and overall system responsiveness. Make sure you also have enough storage space for all you need/want to do. </li>
+                <li> Make sure you choose a case that is large enough for your GPU, cooling setup, and other components. </li>
+            </ul>
+        </section>
+
+        <section class="recommender">
+            <h2> PC Parts Recommender </h2>
+            <p> Select your budget and main use to see a simple recommendation. </p>
+
+            <form class="recommend-form">
+                <label for="budget"> Budget: </label>
+                <select id="budget" name="budget">
+                    <option value=""> Choose a budget </option>
+                    <option value="budget"> Budget (Max: $1000) </option>
+                    <option value="midrange"> Midrange (Max: $2000) </option>
+                    <option value="highend"> High-End (Max: $4000) </option>
+                </select>
+
+                <label for="use"> Main Use: </label>
+                <select id="use" name="use">
+                    <option value=""> Choose a use </option>
+                    <option value="gaming"> Gaming </option>
+                    <option value="school"> School </option>
+                    <option value="office"> Office </option>
+                    <option value="editing"> Editing </option>
+                </select>
+
+                <button type="button" id="recommend-btn"> Show Recommendation </button>
+            </form>
+
+            <div id="recommendation-output"></div>
+        </section>
+    </main>
+    <footer>
+        <p> ©️ <span id="currentyear"></span> | Rafael Mendoza | USA </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

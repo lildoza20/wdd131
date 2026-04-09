@@ -1,0 +1,214 @@
+:root {
+    --primary-color: lightgrey;
+    --secondary-color: steelblue;
+    --accent-color: beige;
+    --text-color: black;
+    --page-background: white;
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--page-background);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--page-background);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero, .intro, .features, .page-intro, .build-tips, .recommender, .safety-tips, .troubleshooter, .contact-form-section, .contact-note {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: var(--page-background);
+}
+
+.hero h1, .intro h2, .features h2, .card h3, .intro h1, .build-tips h2, .recommender h2, .pcard h2, .tcard h2, .safety-tips h2, .troubleshooter h2, .contact-form-section h2, .contact-note h2 {
+    font-family: var(--heading-font);
+}
+
+.hero {
+    background-color: var(--accent-color);
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--page-background);
+    text-decoration: none;
+    border-radius: .5rem;
+}
+
+.card-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card, .pcard, .tcard {
+    border: 1px solid var(--primary-color);
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: var(--page-background);
+}
+
+.card a {
+    display: inline-block;
+    margin-top: .5rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--page-background);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.intro h1, .build-tips h2, .recommender h2, .pcard h2, .build-tips li, .tcard h2, .troubleshooter h2, .safety-tips h2, .safety-tips li, .contact-form-section h2, .contact-note h2, .contact-form-section p, .contact-note li {
+    margin-bottom: .5rem;
+}
+
+.pgrid, .tgrid, .contact-form {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.pcard h2, .tcard h2 {
+    color: var(--secondary-color);
+}
+
+.pcard p, .tcard p {
+    line-height: 1.5;
+}
+
+.build-tips ul, .safety-tips ul, .contact-note ul {
+    margin-top: .5rem;
+    padding-left: 1.5rem;
+}
+
+.recommend-form, .trouble-form {
+    display: grid;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.recommend-form label, .trouble-form label, .contact-form label {
+    font-weight: 700;
+}
+
+.recommend-form select, .recommend-form button, .trouble-form select, .trouble-form button, .contact-form input, .contact-form select, .contact-form textarea, .contact-form button {
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--primary-color);
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.recommend-form button, .trouble-form button, .contact-form button {
+    background-color: var(--secondary-color);
+    color: var(--page-background);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.recommend-form button:hover, .trouble-form button:hover, .contact-form button:hover {
+    opacity: .8;
+}
+
+#recommendation-output, #trouble-output {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: .5rem;
+    background-color: var(--accent-color);
+    min-height: 60px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.intro img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1rem 0 0;
+}
+
+.pcard img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: .5rem 0 1rem;
+}
+
+@media (min-width: 700px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pgrid, .tgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recommend-form, .trouble-form {
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+    }
+
+    .recommend-form button, .trouble-form button, .contact-form button {
+        grid-column: 1/-1;
+        justify-self: start;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

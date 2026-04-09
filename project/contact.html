@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PC Build Help and Troubleshooter Contact Us </title>
+    <meta name="description" content="This is the contact page for PC Build Help and Troubleshooter">
+    <meta name="author" content="Rafael Mendoza">
+    <link rel="stylesheet" href="styles/pchelp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+    <script src="../scripts/getdates.js" defer></script>
+</head>
+<body class="contact">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="parts.html">Parts Guide</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="contact.html">Contact</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1> Contact / Help Request </h1>
+            <p> If you need more direct help with a computer question, please submit via this form to describe your issue. </p>
+        </section>
+
+        <section class="contact-form-section">
+            <h2> Request Help </h2>
+            <p> Fill out this form below with your issue and PC use so the problem can be understood more clearly. </p>
+
+            <form class="contact-form" method="get">
+                <label for="fullname"> Full Name </label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="email"> Email Address </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="issue-type"> Issue Type </label>
+                <select id="issue-type" name="issue-type" required>
+                    <option value=""> Choose An Issue </option>
+                    <option value="frozen-pc"> Frozen PC </option>
+                    <option value="no-display"> No Display </option>
+                    <option value="no-power"> PC Will Not Turn On </option>
+                    <option value="overheating"> Overheating </option>
+                    <option value="slow-performance"> Slow Performance </option>
+                    <option value="parts-help"> Parts/Build Help </option>
+                    <option value="other"> Other </option>
+                    <option value="website"> Website Issue </option>
+                </select>
+
+                <label for="experience"> Experience Level </label>
+                <select id="experience" name="experience" required>
+                    <option value=""> Choose Your Experience </option>
+                    <option value="beginner"> Beginner </option>
+                    <option value="some-experience"> Some Experience </option>
+                    <option value="intermediate"> Intermediate </option>
+                    <option value="n-a"> Not Applicable </option>
+                </select>
+
+                <label for="pc-use"> Main PC Use </label>
+                <select id="pc-use" name="pc-use">
+                    <option value=""> Choose A Main Use </option>
+                    <option value="gaming"> Gaming </option>
+                    <option value="school"> School </option>
+                    <option value="office"> Office </option>
+                    <option value="editing"> Editing </option>
+                    <option value="general"> General Use </option>
+                </select>
+
+                <label for="details"> Describe The Problem </label>
+                <textarea id="details" name="details" rows="4" required></textarea>
+
+                <button type="submit"> Request Help </button>
+            </form>
+        </section>
+
+        <section class="contact-note">
+            <h2> Before You Submit </h2>
+            <ul>
+                <li> Include as much detail as you can about what the computer is doing. </li>
+                <li> Mention if the issue started after installing a part, program, or update. </li>
+                <li> Explain whether the problem happens all the time or only sometimes. </li>
+                <li> List any troubleshooting steps you already tried. </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p> ©️ <span id="currentyear"></span> | Rafael Mendoza | USA </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

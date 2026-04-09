@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PC Build Help and Troubleshooter Troubleshooting Page </title>
+    <meta name="description" content="This is the troubleshooting page for PC Build Help and Troubleshooter">
+    <meta name="author" content="Rafael Mendoza">
+    <link rel="stylesheet" href="styles/pchelp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+    <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/project.js" defer></script>
+</head>
+<body class="ts">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="parts.html">Parts Guide</a>
+            <a href="troubleshooting.html">Troubleshooting</a>
+            <a href="contact.html">Contact</a>
+            <a href="references.html">References</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1> PC Troubleshooting Guide</h1>
+            <p> Having to deal with a computer problem can feel frustrating, then add troubleshooting on top of it? Especially if you are newer to computers or not as technologically inclined can feel very overwhelming.  This page helps work through common PC issues step by step so that you can understand what is wrong and what to check first to fix it. </p>
+        </section>
+
+        <section class="tgrid">
+            <article class="tcard">
+                <h2> Frozen PC </h2>
+                <p> A frozen PC is when the computer stops responding to inputs via mouse clicks or keyboard typing.  This can happen due to overloading programs, overheating, driver issues, or software errors. A good first step is to wait a moment, DO NOT try to continue overloading the computer with inputs. Try opening Task Manager, this can be done normally, or through pressing and holding "CTRL" then "ALT" then "DEL" or "Delete" and close some tasks that might be overloading the computer. If it stays stuck, try restarting the computer. </p>
+            </article>
+
+            <article class="tcard">
+                <h2> No Display </h2>
+                <p> If your PC turns on but nothing appears on the screen, the issue may be with the monitor, display cable, graphics card, or RAM. Check that your monitor is powered on, the display cable, which can be HDMI, DP, USB-C, or etc, is connected correctly, and that the monitor is set to the correct input. It is a good idea to make sure the cable is plugged into the correct port on the PC as well, especially for gaming, there is the port on the GPU and on the Motherboard, make sure it is plugged into the GPU if your computer contains one. </p>
+            </article>
+
+            <article class="tcard">
+                <h2> PC Will Not Turn On </h2>
+                <p> If the computer does not turn on at all, the issue may be related to the power supply, wall outlet, power cable, or power button cables. First, make sure the power cable is connected securely, the outlet works, and the power supply switch is turned to the on position, "I" is on, "O" is off. If there are still no signs of power, you may need to go through and check internal connections. </p>
+            </article>
+
+            <article class="tcard">
+                <h2> Overheating </h2>
+                <p> Overheating happens when the computer gets too hot, which can cause loud fans, lower performance, freezing, or shutdowns.  This can happen due to dust buildup, weak airflow, broken fans, poor cooling, or poor connections. A good first step would be to make sure all fans are spinning and connected correctly, no vents are blocked, and cleaning out heavy dust buildup. </p>
+            </article>
+
+            <article class="tcard">
+                <h2> Slow Performance </h2>
+                <p> A slow computer may take a long time to start programs, load files, or respond to inputs. This can occur due to low storage space, too many startup programs, not enough RAM, overheating, older components such as CPU, HDD, etc. A good first step is to restart the PC, check storage space, turn off some startup programs you don't need, and uninstall unnecessary programs. </p>
+            </article>
+            
+            <article class="tcard">
+                <h2> Random Crashes </h2>
+                <p> Random crashes can happen due to driver issues, overheating, unstable hardware, or software issues. If your PC keeps crashing, try paying attention to when it happens, such as during gaming, startup, or when using a certain program. That pattern can help you diagnose what exactly the issue would be and how to solve it. </p>
+            </article>
+        </section>
+
+        <section class="safety-tips">
+            <h2> Basic Safety Tips </h2>
+            <ul>
+                <li> Turn off the computer completely before opening the case. </li>
+                <li> Unplug the power cable before touching internal components. </li>
+                <li> Be careful with static electricity when handling PC parts. There are anti-static electricity mats and gloves if you feel you need them. </li>
+                <li> Do not force cables or other components into place. </li>
+                <li> If you are unsure, check the manual or ask for help before continuing. </li>
+            </ul>
+        </section>
+
+        <section class="troubleshooter">
+            <h2> Troubleshooting Helper </h2>
+            <p> Select the problem that you are having to see steps to try first. </p>
+
+            <form class="trouble-form">
+                <label for="issue"> Choose an issue: </label>
+                <select id="issue" name="issue">
+                    <option value=""> Select a problem </option>
+                    <option value="frozen"> Frozen PC </option>
+                    <option value="nodisplay"> No Display </option>
+                    <option value="nopower"> PC Will Not Turn On </option>
+                    <option value="overheating"> Overheating </option>
+                    <option value="slow"> Slow Performance </option>
+                    <option value="crashes"> Random Crashes </option>
+                </select>
+
+                <button type="button" id="trouble-btn"> Show Steps </button>
+            </form>
+
+            <div id="trouble-output"></div>
+        </section>
+    </main>
+    <footer>
+        <p> ©️ <span id="currentyear"></span> | Rafael Mendoza | USA </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
